@@ -1,0 +1,104 @@
+public class MilkRecord {
+    private String cowName;
+    private int cowId;
+    private int cowAge;
+
+    private int mondayYield;
+    private int tuesdayYield;
+    private int wednesdayYield;
+    private int thursdayYield;
+    private int fridayYield;
+    private int saturdayYield;
+    private int sundayYield;
+
+    int normalYield = 132;
+    int total;
+
+    public MilkRecord(String cowName, int cowId, int cowAge, int mondayYield, int tuesdayYield, int wednesdayYield, int thursdayYield, int fridayYield, int saturdayYield, int sundayYield) {
+        this.cowName = cowName;
+        this.cowId = cowId;
+        this.cowAge = cowAge;
+        this.mondayYield = mondayYield;
+        this.tuesdayYield = tuesdayYield;
+        this.wednesdayYield = wednesdayYield;
+        this.thursdayYield = thursdayYield;
+        this.fridayYield = fridayYield;
+        this.saturdayYield = saturdayYield;
+        this.sundayYield =  sundayYield;
+    }
+
+    public int computeTotal() {
+        total = mondayYield + tuesdayYield + wednesdayYield + thursdayYield + fridayYield + saturdayYield + sundayYield;
+        System.out.println("Total yield this week is: " + total);
+        return total;
+    }
+
+    public void testNormal() {
+        int total = computeTotal();
+        if (total < normalYield) {
+            System.out.println("Low Yield");
+        } else if (total == normalYield) {
+            System.out.println("Normal Yield");
+        } else {
+            System.out.println("High Yield");
+        }
+    }
+}
+
+public class HealthMonitoring2 {
+    private int cowName;
+    private int cowId;
+    private int gender;
+    private int heartbeat;
+    private int temperature;
+    private int balance;
+    private int pregnancyConfirmation;
+    private int pregnancyMonth;
+    private int lactatingConfirmation;
+    private int lactatingMonth;
+    private int currentIllness;
+    private int currentMedication;
+    private int previousIllness;
+    private int previousMedication;
+    private int chronicIllness;
+    private int medication;
+
+    public HealthMonitoring2(int cowName,int cowId,int gender,int heartbeat,int temperature,int balance,int pregnancyConfirmation,int pregnancyMonth,int lactatingConfirmation,int lactatingMonth,int currentIllness,int currentMedication,int previousIllness,int previousMedication,int chronicIllness,int medication){
+        this.cowName = cowName;
+        this.cowId = cowId;
+        this.gender = gender;
+        this.heartbeat = heartbeat;
+        this.temperature = temperature;
+        this.balance = balance;
+        this.pregnancyConfirmation = pregnancyConfirmation;
+        this.pregnancyMonth = pregnancyMonth;
+        this.lactatingConfirmation = lactatingConfirmation;
+        this.lactatingMonth = lactatingMonth;
+        this.currentIllness = currentIllness;
+        this.currentMedication = currentMedication;
+        this.previousIllness = previousIllness;
+        this.previousMedication = previousMedication;
+        this.chronicIllness = chronicIllness;
+        this.medication = medication;
+    }
+
+    public void testHeartbeat() { //test to check for normal or abnormal heartbeat
+        if (heartbeat > 80) {
+            System.out.println("Abnormally high heartbeat");
+        } else if (heartbeat < 40) {
+            System.out.println("Abnormally low heartbeat");
+        } else {
+            System.out.println("Normal heartbeat");
+        }
+    }
+
+    public void checkTemperature() {//test to check for normal or abnormal body temperature
+        if (temperature > 38) {
+            System.out.println("High body temperature");
+        } else if (temperature < 38) {
+            System.out.println("Low body temperature");
+        } else {
+            System.out.println("Normal body temperature");
+        }
+    }
+}
